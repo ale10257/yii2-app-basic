@@ -35,3 +35,33 @@ variables, and you're going to love it!
 
 **Install**
 
+```
+composer create-project --prefer-dist --stability=dev ale10257/yii2-app-basic-with-env-settings .
+```
+
+**After install**
+
+```
+cd your/project
+cp example.env .env
+```
+Edit your settings in .env file
+
+```
+YII_DEBUG=true
+YII_ENV='dev'
+DB_HOST='localhost'
+DB_NAME='my_db'
+DB_USER='root'
+DB_PASSWD=''
+DB_CHARSET='utf8'
+# other environment settings ...
+```
+
+In your project, example:
+
+```
+'dsn' => 'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'];
+```
+
+**Enjoy :)**
