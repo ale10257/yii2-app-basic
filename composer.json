@@ -1,5 +1,5 @@
 {
-    "name": "ale10257/yii2-app-basic",
+    "name": "ale10257/yii2-app-basic-with-environment-settings",
     "description": "Yii 2 Basic Project Template with environment settings",
     "keywords": ["yii2", "framework", "basic", "project template", ".env mode"],
     "homepage": "http://www.yiiframework.com/",
