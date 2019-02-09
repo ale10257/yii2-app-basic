@@ -1,12 +1,12 @@
 <?php
 $path = dirname(__DIR__);
-
 require $path . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::create($path);
-$dotenv->load();
 
-defined('YII_DEBUG') or define('YII_DEBUG', $_ENV['YII_DEBUG']);
-defined('YII_ENV') or define('YII_ENV', $_ENV['YII_ENV']);
+use Dotenv\Environment\DotenvFactory;
+use Dotenv\Environment\Adapter\EnvConstAdapter as Adapter;
+use Dotenv\Dotenv;
+
+(Dotenv::create($path, null, new DotenvFactory([new Adapter()])))->load();
 
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
